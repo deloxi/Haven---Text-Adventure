@@ -1,0 +1,6 @@
+D:\OneDrive\Game Dev stuff\Visual Studio\Indie quest\Haven - Text Adventure\bin\Release\net5.0\publish\testest\Haven - Text Adventure.pdb
+D:\OneDrive\Game Dev stuff\Visual Studio\Indie quest\Haven - Text Adventure\bin\Release\net5.0\publish\testest\clrcompression.dll
+D:\OneDrive\Game Dev stuff\Visual Studio\Indie quest\Haven - Text Adventure\bin\Release\net5.0\publish\testest\clrjit.dll
+D:\OneDrive\Game Dev stuff\Visual Studio\Indie quest\Haven - Text Adventure\bin\Release\net5.0\publish\testest\coreclr.dll
+D:\OneDrive\Game Dev stuff\Visual Studio\Indie quest\Haven - Text Adventure\bin\Release\net5.0\publish\testest\mscordaccore.dll
+D:\OneDrive\Game Dev stuff\Visual Studio\Indie quest\Haven - Text Adventure\bin\Release\net5.0\publish\testest\Haven - Text Adventure.exe

@@ -1,0 +1,5 @@
+D:\OneDrive\Game Dev stuff\Visual Studio\Indie quest\Haven - Text Adventure\bin\Release\net5.0\publish\Haven - Text Adventure.exe
+D:\OneDrive\Game Dev stuff\Visual Studio\Indie quest\Haven - Text Adventure\bin\Release\net5.0\publish\Haven - Text Adventure.dll
+D:\OneDrive\Game Dev stuff\Visual Studio\Indie quest\Haven - Text Adventure\bin\Release\net5.0\publish\Haven - Text Adventure.deps.json
+D:\OneDrive\Game Dev stuff\Visual Studio\Indie quest\Haven - Text Adventure\bin\Release\net5.0\publish\Haven - Text Adventure.runtimeconfig.json
+D:\OneDrive\Game Dev stuff\Visual Studio\Indie quest\Haven - Text Adventure\bin\Release\net5.0\publish\Haven - Text Adventure.pdb

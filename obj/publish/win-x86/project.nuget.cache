@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "HbSVGEqi389mn+11zPl9R/dx9Zc7pGh0mczwhjUlq21FdEX53NdUvB5rLjv6tnmBqSBv2rd9dhiNnt2EgyJZWg==",
+  "success": true,
+  "projectFilePath": "D:\\OneDrive\\Game Dev stuff\\Visual Studio\\Indie quest\\Haven - Text Adventure\\Haven - Text Adventure.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lukas\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\5.0.17\\microsoft.netcore.app.runtime.win-x86.5.0.17.nupkg.sha512",
+    "C:\\Users\\Lukas\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\5.0.17\\microsoft.windowsdesktop.app.runtime.win-x86.5.0.17.nupkg.sha512",
+    "C:\\Users\\Lukas\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\5.0.17\\microsoft.aspnetcore.app.runtime.win-x86.5.0.17.nupkg.sha512"
+  ],
+  "logs": []
+}

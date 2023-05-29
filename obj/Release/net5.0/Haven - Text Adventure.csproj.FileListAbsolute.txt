@@ -1,0 +1,16 @@
+D:\OneDrive\Game Dev stuff\Visual Studio\Indie quest\Haven - Text Adventure\bin\Release\net5.0\Haven - Text Adventure.exe
+D:\OneDrive\Game Dev stuff\Visual Studio\Indie quest\Haven - Text Adventure\bin\Release\net5.0\Haven - Text Adventure.deps.json
+D:\OneDrive\Game Dev stuff\Visual Studio\Indie quest\Haven - Text Adventure\bin\Release\net5.0\Haven - Text Adventure.runtimeconfig.json
+D:\OneDrive\Game Dev stuff\Visual Studio\Indie quest\Haven - Text Adventure\bin\Release\net5.0\Haven - Text Adventure.runtimeconfig.dev.json
+D:\OneDrive\Game Dev stuff\Visual Studio\Indie quest\Haven - Text Adventure\bin\Release\net5.0\Haven - Text Adventure.dll
+D:\OneDrive\Game Dev stuff\Visual Studio\Indie quest\Haven - Text Adventure\bin\Release\net5.0\Haven - Text Adventure.pdb
+D:\OneDrive\Game Dev stuff\Visual Studio\Indie quest\Haven - Text Adventure\obj\Release\net5.0\Haven - Text Adventure.csproj.AssemblyReference.cache
+D:\OneDrive\Game Dev stuff\Visual Studio\Indie quest\Haven - Text Adventure\obj\Release\net5.0\Haven - Text Adventure.GeneratedMSBuildEditorConfig.editorconfig
+D:\OneDrive\Game Dev stuff\Visual Studio\Indie quest\Haven - Text Adventure\obj\Release\net5.0\Haven - Text Adventure.AssemblyInfoInputs.cache
+D:\OneDrive\Game Dev stuff\Visual Studio\Indie quest\Haven - Text Adventure\obj\Release\net5.0\Haven - Text Adventure.AssemblyInfo.cs
+D:\OneDrive\Game Dev stuff\Visual Studio\Indie quest\Haven - Text Adventure\obj\Release\net5.0\Haven - Text Adventure.csproj.CoreCompileInputs.cache
+D:\OneDrive\Game Dev stuff\Visual Studio\Indie quest\Haven - Text Adventure\obj\Release\net5.0\Haven - Text Adventure.dll
+D:\OneDrive\Game Dev stuff\Visual Studio\Indie quest\Haven - Text Adventure\obj\Release\net5.0\refint\Haven - Text Adventure.dll
+D:\OneDrive\Game Dev stuff\Visual Studio\Indie quest\Haven - Text Adventure\obj\Release\net5.0\Haven - Text Adventure.pdb
+D:\OneDrive\Game Dev stuff\Visual Studio\Indie quest\Haven - Text Adventure\obj\Release\net5.0\Haven - Text Adventure.genruntimeconfig.cache
+D:\OneDrive\Game Dev stuff\Visual Studio\Indie quest\Haven - Text Adventure\obj\Release\net5.0\ref\Haven - Text Adventure.dll
