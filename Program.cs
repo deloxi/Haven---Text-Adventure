@@ -26,12 +26,15 @@ namespace Haven___Text_Adventure
                     gameTest.Hero.Name = $"CoolHero.V{i}";
                 }
 
-                // gameplay starting underneath here
+                // gameplay loop
 
                 while (gameTest.Hero.IsAlive() && gameTest.gameEnd == false)
                 {
                     gameTest.PlayerActionsList();
                 }
+                
+                // game end, good and bad
+
                 if (gameTest.gameEnd == true)
                 {
                     Console.Clear();

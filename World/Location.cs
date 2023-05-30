@@ -33,6 +33,7 @@ namespace Haven___Text_Adventure
             location.AdjacentLocations.Add(this);
             }
 
+        // visual danger color for the player
         public void DifficultyColor(int playerLevel)
         {
 

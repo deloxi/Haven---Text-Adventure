@@ -8,12 +8,19 @@ namespace Haven___Text_Adventure
 {
     public class Game
     {
-        // SAVING THE GAME?!?!?!
+        // *** cool features I wanna save for future stuff ***
+
+        // safe files?
         //public Dictionary<string, Game> Games = new Dictionary<string, Game>();
 
-        // HOW TO MAKE A MORE VARID AREA FOR MONSTERS??!
+        // interesting monster variation?
         //public Dictionary<Monster, int> MonsterMap = new Dictionary<Monster, int>();
         //public Dictionary<Monster, int> MonsterMap2 = new Dictionary<Monster, int>();
+
+        // *** cool features I wanna save for future stuff ***
+
+
+        // features that need public availability
 
         public bool gameEnd = false;
         public List<Location> listOfLocations;
@@ -74,7 +81,7 @@ namespace Haven___Text_Adventure
             Location doomMountain = new Location("Doom Mountain", "A large mountainous area where once you enter... you do not return", false, true, 10);
 
             
-
+            // adding locations to list for viewing in-game
             listOfLocations.Add(haven);
             listOfLocations.Add(goblinDen);
             listOfLocations.Add(goblinKingTreasury);
@@ -83,19 +90,17 @@ namespace Haven___Text_Adventure
             listOfLocations.OrderBy(x => x.LevelRecommended).ToList().ForEach(x =>listOfLocations.Add(x));
             listOfLocations.RemoveRange(0, listOfLocations.Count/2);
 
-
+            // setting neighbors
             haven.SetNeighborLocations(goblinDen);
             haven.SetNeighborLocations(theDocks);
             goblinDen.SetNeighborLocations(goblinKingTreasury);
             doomMountain.SetNeighborLocations(theDocks);
 
             // player info
-
             Player hero = new Player("Hero", 10, 2, 1);
             Hero = hero;
 
             // Item info
-
             Item woodSword = new Item(ItemType.Weapon, "Wood Sword", 1, "a simple sword made from wood, not much better than a toy");
             Item bucket = new Item(ItemType.Helmet, "Bucket", 1, "a bucket with a few holes for vision, not optimal nor stylish but it'll work");
             Item leatherArmor = new Item(ItemType.Armor, "Leather Armor", 1, "tattered cowhide made into protection for farmers");
@@ -148,7 +153,6 @@ namespace Haven___Text_Adventure
             };
 
             // monsters info
-
             Monster goblin = new Monster("Goblin", 5, 3, 1, 1, 3, GoblinDrops);
             goblinDen.Monsters.Add(goblin);
             Goblin = goblin;
@@ -164,9 +168,7 @@ namespace Haven___Text_Adventure
             CursedDragon = cursedDragon;
 
 
-            // start of game 
-            //hero.EquipItem(seaChart, 0);
-            //hero.EquipItem(mysteriousOrb, 0);
+            // start of game
             startingLocation = haven;
             currentLocation = startingLocation;
 
@@ -219,29 +221,17 @@ namespace Haven___Text_Adventure
 
 
 
-        // Saved & confirmed playerActions
+        // player travel & interacting
         public void PlayerLocationAction()
         {
-            // selecting location playerAction
-
             bool selectingArea = true;
             int playerChoice = 0;
             int LocationIndexDiff = 1;
-            //bool firstEntry = true;
 
             while (selectingArea)
             {
-                // showing current location & adjacent available locations
-                /*if(firstEntry == true)
-                {
-                    Console.SetCursorPosition(mainXOffSet, mainYOffSet+1);
-                    firstEntry = false;
-                }
-                else
-                {
-                    MainScreenPos();
-                }*/
-                Console.WriteLine(); // TODO: Check if you can fix the space issue
+                // prints choices for player
+                Console.WriteLine();
                 Console.Write("     If you wanna enter ");
 
                 currentLocation.DifficultyColor(Hero.LVL);
@@ -293,7 +283,9 @@ namespace Haven___Text_Adventure
                 {
                     selectingArea = false;
                     Console.Clear();
-                    if (currentLocation.HasEnemies == false) // should always be Haven
+
+                    // will always be Haven
+                    if (currentLocation.HasEnemies == false) 
                     {
                         bool enterPressed = false;
                         while (enterPressed == false)
@@ -343,7 +335,8 @@ namespace Haven___Text_Adventure
                         Console.Clear();
 
                     }
-                    else if (currentLocation.Name == "Doom Mountain") // END OF THE GAME RIGHT HERE
+                    // End of the game location
+                    else if (currentLocation.Name == "Doom Mountain") 
                     {
                         MainScreenPos();
                         Console.WriteLine(Hero.Name + " found the source of evil and encountered a " + currentLocation.Monsters[0].Name);
@@ -429,6 +422,7 @@ namespace Haven___Text_Adventure
                             }
                         }
                     }
+                    // every other location with monsters
                     else
                     {
                         MainScreenPos();
@@ -488,7 +482,7 @@ namespace Haven___Text_Adventure
             }
         }
 
-        public void PlayerStatus() // inspecting
+        public void PlayerStatus() // inspecting quest status
         {
             int posY = mainYOffSet+2;
             bool inspectingAchievements = true;
@@ -572,7 +566,7 @@ namespace Haven___Text_Adventure
             }
         }
 
-        public void MonsterCodex()
+        public void MonsterCodex() // showing all explored features
         {
             bool playerChoosing = true;
             int playerSelection = 0;
@@ -583,7 +577,6 @@ namespace Haven___Text_Adventure
 
             while (playerChoosing == true)
             {
-                //MainScreenPos();
                 Console.WriteLine();
                 foreach (Location location in listOfLocations)
                 {
@@ -632,7 +625,6 @@ namespace Haven___Text_Adventure
                                 MainScreenPos();
                                 Console.WriteLine("You're viewing information about " + listOfLocations[playerSelection].Name + ":");
                                 DrawWrappedText(listOfLocations[playerSelection].Description, mainTextWidth, mainXOffSet, 4);
-                                //Console.WriteLine("     " + listOfLocations[playerSelection].Description);
                                 Console.WriteLine();
                                 if (listOfLocations[playerSelection].Monsters.Count != 0)
                                 {
@@ -707,13 +699,7 @@ namespace Haven___Text_Adventure
                 
         }
 
-        /*
-            ActionScreenPos();
-            actionText = "[T]ravel [S]tatus [C]odex";
-            DrawWrappedText(actionText, actionTextWidth, actionXOffSet, actionYOffSet); 
-          
-         */
-
+        // declaring all player actions
         public void PlayerActionsList()
         {
 
@@ -732,13 +718,6 @@ namespace Haven___Text_Adventure
             DrawWrappedText(actionText, actionTextWidth, actionXOffSet, actionYOffSet);
             
             DrawUI();
-            
-            /*
-            Console.WriteLine("What action would you like to perform?");
-            Console.WriteLine("Travel [T]");
-            Console.WriteLine("Status [S]");
-            Console.WriteLine("Codex  [C]");
-            */
 
             ConsoleKey playerInput = Console.ReadKey().Key;
 
@@ -776,9 +755,11 @@ namespace Haven___Text_Adventure
 
         }
 
-        public void GameStart() // currently being used for testing stuff only
+        /* 
+        // currently being used for testing stuff only
+        public void GameStart()
         {
-            while (Hero.HP > 0) // use case switch later with different actions??
+            while (Hero.HP > 0)
             {
                 Console.WriteLine("TESTING");
                 Console.WriteLine("Hero's level is: " + Hero.LVL);
@@ -796,18 +777,17 @@ namespace Haven___Text_Adventure
             }
             Console.WriteLine("Game over!");
         }
+        */
 
 
-        public void WindowSize() // testing stuff only
+        public void WindowSize()
         {
-            //Console.WriteLine(Console.WindowHeight);
-            //Console.WriteLine(Console.WindowWidth);
             Console.SetWindowSize(100, 40);
         }
 
+        // boxes for UI
         static void DrawBox(int startX, int startY, int width, int height, string title)
         {
-            // Define the box drawing characters
             char topLeftCorner = '┌';
             char topRightCorner = '┐';
             char bottomLeftCorner = '└';
@@ -815,7 +795,6 @@ namespace Haven___Text_Adventure
             char horizontalLine = '─';
             char verticalLine = '│';
 
-            // Save the current cursor position
             int currentLeft = Console.CursorLeft;
             int currentTop = Console.CursorTop;
 
@@ -848,10 +827,10 @@ namespace Haven___Text_Adventure
             }
             Console.Write(bottomRightCorner);
 
-            // Restore the cursor position
             Console.SetCursorPosition(currentLeft, currentTop);
         }
 
+        // draw 3 boxes for the UI
         public void DrawUI()
         {
 
@@ -863,6 +842,8 @@ namespace Haven___Text_Adventure
             DrawBox(actionStartX, actionStartY, actionWidth, 5, "Available Actions");
 
         }
+
+        // wrapping text inside the UI boxes
         private static string[] WrapText(string text, int width, string splitChar = null)
         {
             List<string> lines = new List<string>();
@@ -903,14 +884,15 @@ namespace Haven___Text_Adventure
             return lines.ToArray();
         }
 
+        // cursor for mainScreen Box
         public void MainScreenPos()
         {
             Console.SetCursorPosition(mainXOffSet, mainYOffSet);
         }
+        // cursor for statusScreen Box
         public void StatusScreenPos()
         {
             Console.SetCursorPosition(statusXOffSet, statusYOffSet);
-            //string statusText = $"{Hero.Name} level: {Hero.LVL}\n \n Health = {Hero.HP} / {Hero.MaxHealth}\n Attack = {Hero.ATK}\n     Defense = {Hero.DEF}\n Experience = {Hero.EXP} / {Hero.LVL * 100}\n Equipment:\n";
             string statusText = $"{Hero.Name} level: {Hero.LVL}##Health = {Hero.HP} / {Hero.MaxHealth}#Attack = {Hero.ATK}#Defense = {Hero.DEF}#Experience = {Hero.EXP} / {Hero.LVL * 10}##──────Equipment──────##";
 
             
@@ -972,11 +954,14 @@ namespace Haven___Text_Adventure
 
 
         }
+
+        // cursor for ActionScreen Box
         public void ActionScreenPos()
         {
             Console.SetCursorPosition(actionXOffSet, actionYOffSet);
         }
 
+        // drawing the wrapped text
         public void DrawWrappedText(string text, int textWidth, int xOffSet, int yOffSet, string splitChar = null)
         {
             string[] lines = WrapText(text, textWidth, splitChar);

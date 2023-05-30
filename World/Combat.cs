@@ -22,6 +22,7 @@ namespace Haven___Text_Adventure
 
         public void CombatStart()
         {
+            // if encounter = final boss
             if(combatMonster.Name == "Cursed Dragon")
             {
                 if (combatPlayer.EquippedItems.ContainsKey(ItemType.Quest2))
